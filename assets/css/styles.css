@@ -17,6 +17,7 @@ html {
 
 body {
     font-size: 1.6rem;
+    font-family: 'Poppins', sans-serif;
 }
 
 /* common */
@@ -44,7 +45,7 @@ a {
 }
 
 /* header */
-header {
+.header {
     padding: 36px 0 10px;
     background-color: #FFFCF4;
     position: sticky;
@@ -96,4 +97,172 @@ header .btn.sign-up {
 
 header .btn.sign-up:hover {
     background-color: var(--primary-color);
+}
+
+/* hero */
+.hero {
+    background: #FFFCF4;
+    padding-top: 54px;
+    padding-bottom: 64px;
+}
+
+.hero .component {
+    display: flex;
+    justify-content: space-between;
+}
+
+.hero .left {
+    position: relative;
+}
+
+.hero .left>img {
+    width: 470px;
+    height: 658px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+.hero .left .courses {
+    position: absolute;
+    left: 300px;
+    bottom: 48px;
+    background-color: #fff;
+    box-shadow: 0px 16px 32px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 24px 58px 24px 24px;
+}
+
+.hero .left .courses .item {
+    display: flex;
+    align-items: center;
+}
+
+.hero .left .courses .item .icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 16px;
+}
+
+.hero .left .courses .item+.item {
+    margin-top: 14px;
+}
+
+.hero .left .courses .item:nth-of-type(1) .icon {
+    background: #FFF9E8;
+}
+
+.hero .left .courses .item:nth-of-type(2) .icon {
+    background: #FCEFFF;
+}
+
+.hero .left .courses .item:nth-of-type(3) .icon {
+    background: #EBEAFF;
+}
+
+.hero .left .courses .item .label {
+    font-size: 1.4rem;
+    color: var(--text-color);
+    line-height: 2.6rem;
+}
+
+.hero .left .courses .item .title {
+    font-weight: 600;
+    font-size: 1.8rem;
+    color: #171100;
+    line-height: 3rem;
+}
+
+.hero .right {
+    max-width: 470px;
+}
+
+.hero .right .heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 5.8rem;
+    line-height: 6.8rem;
+    letter-spacing: -0.02em;
+    color: #171100;
+    margin-top: 64px;
+}
+
+.hero .right .desc {
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--text-color);
+    margin-top: 22px;
+}
+
+.hero .right .btn-group {
+    margin-top: 38px;
+    display: flex;
+    align-items: center;
+}
+
+.hero .right .btn-cta {
+    display: inline-block;
+    background: #FFB900;
+    border-radius: 32px;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.8rem;
+    min-width: 180px;
+    line-height: 6.4rem;
+    text-align: center;
+    transition: .25s;
+    margin-right: 28px;
+}
+
+.hero .right .btn-cta:hover {
+    background-color: var(--secondary-coder);
+}
+
+.hero .right .btn-watch {
+    display: flex;
+    align-items: center;
+    border: none;
+    background-color: transparent;
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: #171100;
+    cursor: pointer;
+}
+
+.hero .right .btn-watch .icon {
+    width: 40px;
+    height: 40px;
+    background: #FFFFFF;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.07);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 14px;
+}
+
+.hero .right .recent {
+    margin-top: 48px;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--text-color);
+}
+
+.hero .right .recent .stats {
+    margin-top: 8px;
+}
+
+.hero .right .recent strong {
+    font-weight: 700;
+    font-size: 4.4rem;
+    line-height: 5.4rem;
+    color: var(--secondary-coder);
+}
+
+.hero .right .recent strong+strong {
+    margin-left: 28px;
 }

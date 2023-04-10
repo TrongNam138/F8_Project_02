@@ -13,28 +13,90 @@
 </head>
 
 <body>
-    <header class="wrapper">
+    <header class="header wrapper">
         <div class="component">
             <a href="/"><img src="./assets/img/logo.svg" alt="logo"></a>
             <nav>
                 <ul>
                     <li>
-                        <a class="active" href="#">Home</a>
+                        <a class="active" href="#!">Home</a>
                     </li>
                     <li>
-                        <a href="#">Courses</a>
+                        <a href="#!">Courses</a>
                     </li>
                     <li>
-                        <a href="#">Pricing</a>
+                        <a href="#!">Pricing</a>
                     </li>
                     <li>
-                        <a href="#">Reviews</a>
+                        <a href="#!">Reviews</a>
                     </li>
                 </ul>
             </nav>
-            <a class="btn sign-up" href="#">Sign Up</a>
+            <a class="btn sign-up" href="#!">Sign Up</a>
         </div>
     </header>
+
+    <main>
+        <div class="hero wrapper">
+            <div class="component">
+                <div class="left">
+                    <img src="./assets/img/hero-left.jpg" alt="Learn without limits and spread knowledge.">
+                    <ul class="courses">
+                        <li class="item">
+                            <div class="icon">
+                                <img src="./assets/img/icon-list.svg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="label">20 Courses</p>
+                                <p class="title">UI/UX Design</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="icon">
+                                <img src="./assets/img/icon-code.svg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="label">20 Courses</p>
+                                <p class="title">Development</p>
+                            </div>
+                        </li>
+                        <li class="item">
+                            <div class="icon">
+                                <img src="./assets/img/icon-speaker.svg" alt="">
+                            </div>
+                            <div class="info">
+                                <p class="label">30 Courses</p>
+                                <p class="title">Marketing</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="right">
+                    <h1 class="heading">
+                        Learn without limits and spread knowledge.
+                    </h1>
+                    <p class="desc">Build new skills for that “this is my year” feeling with courses, certificates, and
+                        degrees from world-class universities and companies.</p>
+                    <div class="btn-group">
+                        <a href="#!" class="btn-cta">See Courses</a>
+                        <button class="btn-watch">
+                            <div class="icon">
+                                <img src="./assets/img/play.svg" alt="">
+                            </div>
+                            Watch Video
+                        </button>
+                    </div>
+                    <div class="recent">
+                        <p class="title">Recent engagement</p>
+                        <p class="stats">
+                            <strong>50K</strong> Students
+                            <strong>70+</strong> Courses
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 
     <script>
         document.querySelectorAll('header nav a').forEach((a) => {
