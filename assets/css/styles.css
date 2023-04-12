@@ -6,7 +6,7 @@
 
 :root {
     --primary-color: #ffb900;
-    --secondary-coder: #171100;
+    --secondary-color: #171100;
     --text-color: #5F5B53;
     --font-heading: Sen, sans-serif;
 }
@@ -26,22 +26,56 @@ a {
 }
 
 .wrapper {
-    width: 1440px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 
 .component {
-    width: 1170px;
+    max-width: 1170px;
+    width: calc(100% - 20px);
     margin: 0 auto;
 }
 
 .btn {
     color: #fff;
-    background-color: var(--secondary-coder);
+    background-color: var(--secondary-color);
     border-radius: 24.5px;
     text-align: center;
     font-weight: 600;
     transition: .25s;
+    border: none;
+}
+
+.btn:hover {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    cursor: pointer;
+}
+
+.heading {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: 38px;
+    line-height: 4.8rem;
+    letter-spacing: -0.02em;
+    color: var(--secondary-color);
+}
+
+.desc {
+    font-size: 1.8rem;
+    line-height: 2.6rem;
+    color: var(--text-color);
+}
+
+.line-clamp {
+    display: -webkit-box;
+    -webkit-line-clamp: var(--line-clamp, 1);
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.break-all {
+    word-break: break-all;
 }
 
 /* header */
@@ -50,6 +84,7 @@ a {
     background-color: #FFFCF4;
     position: sticky;
     top: -26px;
+    z-index: 1000;
 }
 
 header nav ul,
@@ -71,7 +106,7 @@ header nav a {
 }
 
 header nav a.active {
-    color: var(--secondary-coder);
+    color: var(--secondary-color);
 }
 
 header nav a.active::after {
@@ -86,17 +121,13 @@ header nav a.active::after {
 }
 
 header nav a:hover {
-    color: var(--secondary-coder);
+    color: var(--secondary-color);
 }
 
 header .btn.sign-up {
     min-width: 144px;
     line-height: 5rem;
     margin-left: calc(70px - 21px);
-}
-
-header .btn.sign-up:hover {
-    background-color: var(--primary-color);
 }
 
 /* hero */
@@ -117,9 +148,10 @@ header .btn.sign-up:hover {
 
 .hero .left>img {
     width: 470px;
-    height: 658px;
+    height: 685px;
     object-fit: cover;
     border-radius: 20px;
+    display: block;
 }
 
 .hero .left .courses {
@@ -181,19 +213,13 @@ header .btn.sign-up:hover {
 }
 
 .hero .right .heading {
-    font-family: var(--font-heading);
-    font-weight: 700;
     font-size: 5.8rem;
     line-height: 6.8rem;
-    letter-spacing: -0.02em;
-    color: #171100;
     margin-top: 64px;
 }
 
 .hero .right .desc {
-    font-size: 1.8rem;
     line-height: 3rem;
-    color: var(--text-color);
     margin-top: 22px;
 }
 
@@ -218,7 +244,7 @@ header .btn.sign-up:hover {
 }
 
 .hero .right .btn-cta:hover {
-    background-color: var(--secondary-coder);
+    background-color: var(--secondary-color);
 }
 
 .hero .right .btn-watch {
@@ -260,9 +286,128 @@ header .btn.sign-up:hover {
     font-weight: 700;
     font-size: 4.4rem;
     line-height: 5.4rem;
-    color: var(--secondary-coder);
+    color: var(--secondary-color);
 }
 
 .hero .right .recent strong+strong {
     margin-left: 28px;
+}
+
+/* popular */
+
+.popular {
+    margin: 200px 0;
+}
+
+.popular .popular-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .popular-top .info {
+    max-width: 460px;
+}
+
+.popular .popular-top .controls {
+    display: flex;
+    gap: 18px;
+}
+
+.popular .popular-top .controls .control-btn {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid currentColor;
+    border-radius: 50%;
+    background-color: #fff;
+    transition: .25s;
+    color: var(--primary-color);
+}
+
+.popular .popular-top .controls .control-btn:hover {
+    cursor: pointer;
+    color: #fff;
+    background-color: var(--primary-color);
+}
+
+.popular .courses {
+    margin-top: 55px;
+    display: flex;
+    gap: 30px;
+}
+
+.popular .course {
+    border: 1px solid #E2DFDA;
+    border-radius: 12px;
+    flex: 1;
+    border-top: none;
+    background-color: #fff;
+    transition: .25s;
+}
+
+.popular .course:hover {
+    box-shadow: 0px 18px 36px rgba(0, 0, 0, 0.05);
+    border-color: transparent;
+}
+
+
+.popular .course .thumb {
+    width: calc(100% + 2px);
+    height: 278px;
+    border-radius: 12px 12px 0px 0px;
+    object-fit: cover;
+    margin-left: -1px;
+}
+
+.popular .course .content {
+    padding: 22px;
+}
+
+.popular .course .info {
+    display: flex;
+    justify-content: space-between;
+}
+
+.popular .course .info h3 {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--secondary-color);
+}
+
+.popular .course .info .rating {
+    color: var(--primary-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 6px;
+    margin-left: 8px;
+}
+
+.popular .course .desc {
+    margin-top: 6px;
+    font-size: 1.4rem;
+}
+
+.popular .course .foot {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular .course .price {
+    font-weight: 600;
+    font-size: 1.8rem;
+    line-height: 3rem;
+    color: var(--secondary-color);
+}
+
+.popular .course .btn.book {
+    padding: 12px 24px;
+    font-size: 1.4rem;
+    line-height: 2.6rem;
 }
